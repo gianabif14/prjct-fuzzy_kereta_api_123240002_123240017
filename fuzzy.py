@@ -1,4 +1,3 @@
-
 import streamlit as st
 import pandas as pd
 import numpy as np
@@ -242,7 +241,7 @@ RULES = [
 # Kamus konversi internal penyelarasan penulisan string antar modul fungsi
 _B_MAP = {'Murah': 'Murah', 'Sedang': 'Sedang', 'Mahal': 'Mahal'}
 _W_MAP = {'Cepat': 'Cepat', 'Normal': 'Normal', 'Lama': 'Lama'}
-_R_MAP = {'Murah': 'Bagus', 'Sedang': 'Biasa', 'Mahal': 'Kurang', 'Bagus': 'Bagus', 'Biasa': 'Biasa', 'Kurang': 'Kurang'}
+_R_MAP = {'Bagus': 'Bagus', 'Biasa': 'Biasa', 'Kurang': 'Kurang'}
 
 
 #  MESIN INFERENSI FUZZY TSUKAMOTO 
@@ -275,7 +274,7 @@ def tsukamoto(biaya_val, waktu_val, rangkaian_val, b_lo, b_mid, b_hi, w_lo, w_mi
         else: # Sangat Tidak Direkomendasikan
             z = z_base * (1.0 - alpha)
 
-        display_r_term = 'Bagus' if r_term == 'Murah' else 'Biasa' if r_term == 'Sedang' else 'Kurang'
+        display_r_term = 'Bagus' if r_term == 'Bagus' else 'Biasa' if r_term == 'Kurang' else 'Kurang'
 
         rule_details.append({
             'Aturan': f"R{idx}",
