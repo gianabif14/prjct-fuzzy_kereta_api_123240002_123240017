@@ -79,14 +79,14 @@ st.markdown("""
 
 # Konversi jenis rangkaian teks kualitatif dari berkas CSV menjadi nilai tegas (1-5)
 RANGKAIAN_MAP = {
-    'New Generation Stainless Steel': 5,
     'Eksekutif New Generation Stainless Steel': 5,
-    'New Generation Modifikasi': 4,
+    'New Generation Stainless Steel': 5,
     'Eksekutif New Generation Mild Steel': 4,
     'Eksekutif New Generation Modifikasi Mild Steel': 4,
+    'New Generation Modifikasi': 4,
     'Eksekutif Mild Steel': 3,
     'Premium Stainless Steel': 3,
-    'Premium Mild Steel': 3,
+    'Premium Mild Steel': 2,
     'Premium Modifikasi Mild Steel': 2,
     'Ekonomi Modifikasi': 2,
     'Mild Steel PSO': 1,
@@ -345,7 +345,7 @@ def main():
 
         st.divider()
         st.caption("Metode Penilaian: Murni Fuzzy Tsukamoto")
-        st.caption("© Copyright 2026. All rights reserved Kelompok 10 SCPK KAI")
+        st.caption("© Copyright 2026. All rights reserved")
 
     # Alur navigasi multi-halaman kontrol session state
     if st.session_state.step == 1:
@@ -420,13 +420,15 @@ def step2_perhitungan():
     tc1, tc2 = st.columns(2)
     with tc1:
         st.markdown(f"""
-        **Variabel Biaya (Rupiah)** - Batas Bawah Tiket (Murah Penuh): `Rp{b_lo:,.0f}`  
+        **Variabel Biaya (Rupiah)** 
+        - Batas Bawah Tiket (Murah Penuh): `Rp{b_lo:,.0f}`  
         - Titik Tengah (Median): `Rp{b_mid:,.0f}`  
         - Batas Atas Tiket (Mahal Penuh): `Rp{b_hi:,.0f}`
         """)
     with tc2:
         st.markdown(f"""
-        **Variabel Waktu Tempuh (Menit)** - Batas Bawah Durasi (Cepat Penuh): `{w_lo:.0f}` menit  
+        **Variabel Waktu Tempuh (Menit)** 
+        - Batas Bawah Durasi (Cepat Penuh): `{w_lo:.0f}` menit  
         - Titik Tengah (Median): `{w_mid:.0f}` menit  
         - Batas Atas Durasi (Lama Penuh): `{w_hi:.0f}` menit
         """)
