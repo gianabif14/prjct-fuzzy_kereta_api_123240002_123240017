@@ -206,43 +206,43 @@ def plot_membership_functions(title, lo, mid, hi, labels, current_val=None, is_c
 
 RULES = [
     # --- KELOMPOK BIAYA: MURAH ---
-    ('Murah', 'Cepat', 'Murah', 'Sangat Direkomendasikan', 100.0),   
-    ('Murah', 'Cepat', 'Sedang', 'Direkomendasikan', 75.0),          
-    ('Murah', 'Cepat', 'Mahal', 'Direkomendasikan', 66.0),         
-    ('Murah', 'Normal', 'Murah', 'Sangat Direkomendasikan', 85.0),  
-    ('Murah', 'Normal', 'Sedang', 'Direkomendasikan', 70.0),         
-    ('Murah', 'Normal', 'Mahal', 'Tidak Direkomendasikan', 45.0),  
-    ('Murah', 'Lama', 'Murah', 'Tidak Direkomendasikan', 40.0),     
-    ('Murah', 'Lama', 'Sedang', 'Tidak Direkomendasikan', 35.0),     
-    ('Murah', 'Lama', 'Mahal', 'Sangat Tidak Direkomendasikan', 15.0), 
+    ('Murah', 'Cepat', 'Bagus', 'Sangat Direkomendasikan', 100.0),
+    ('Murah', 'Cepat', 'Biasa', 'Direkomendasikan', 75.0),
+    ('Murah', 'Cepat', 'Kurang', 'Direkomendasikan', 66.0),
+    ('Murah', 'Normal', 'Bagus', 'Sangat Direkomendasikan', 85.0),
+    ('Murah', 'Normal', 'Biasa', 'Direkomendasikan', 70.0),
+    ('Murah', 'Normal', 'Kurang', 'Tidak Direkomendasikan', 45.0),
+    ('Murah', 'Lama', 'Bagus', 'Tidak Direkomendasikan', 40.0),
+    ('Murah', 'Lama', 'Biasa', 'Tidak Direkomendasikan', 35.0),
+    ('Murah', 'Lama', 'Kurang', 'Sangat Tidak Direkomendasikan', 15.0),
 
     # --- KELOMPOK BIAYA: SEDANG ---
-    ('Sedang', 'Cepat', 'Murah', 'Sangat Direkomendasikan', 85.0),  
-    ('Sedang', 'Cepat', 'Sedang', 'Direkomendasikan', 70.0),         
-    ('Sedang', 'Cepat', 'Mahal', 'Tidak Direkomendasikan', 45.0),  
-    ('Sedang', 'Normal', 'Murah', 'Direkomendasikan', 66.0),        
-    ('Sedang', 'Normal', 'Sedang', 'Tidak Direkomendasikan', 40.0),  
-    ('Sedang', 'Normal', 'Mahal', 'Tidak Direkomendasikan', 35.0),  
-    ('Sedang', 'Lama', 'Murah', 'Tidak Direkomendasikan', 33.0),    
-    ('Sedang', 'Lama', 'Sedang', 'Sangat Tidak Direkomendasikan', 20.0), 
-    ('Sedang', 'Lama', 'Mahal', 'Sangat Tidak Direkomendasikan', 10.0), 
+    ('Sedang', 'Cepat', 'Bagus', 'Sangat Direkomendasikan', 85.0),
+    ('Sedang', 'Cepat', 'Biasa', 'Direkomendasikan', 70.0),
+    ('Sedang', 'Cepat', 'Kurang', 'Tidak Direkomendasikan', 45.0),
+    ('Sedang', 'Normal', 'Bagus', 'Direkomendasikan', 66.0),
+    ('Sedang', 'Normal', 'Biasa', 'Tidak Direkomendasikan', 40.0),
+    ('Sedang', 'Normal', 'Kurang', 'Tidak Direkomendasikan', 35.0),
+    ('Sedang', 'Lama', 'Bagus', 'Tidak Direkomendasikan', 33.0),
+    ('Sedang', 'Lama', 'Biasa', 'Sangat Tidak Direkomendasikan', 20.0),
+    ('Sedang', 'Lama', 'Kurang', 'Sangat Tidak Direkomendasikan', 10.0),
 
     # --- KELOMPOK BIAYA: MAHAL ---
-    ('Mahal', 'Cepat', 'Murah', 'Direkomendasikan', 66.0),          
-    ('Mahal', 'Cepat', 'Sedang', 'Tidak Direkomendasikan', 40.0),    
-    ('Mahal', 'Cepat', 'Mahal', 'Tidak Direkomendasikan', 35.0),   
-    ('Mahal', 'Normal', 'Murah', 'Tidak Direkomendasikan', 40.0),   
-    ('Mahal', 'Normal', 'Sedang', 'Sangat Tidak Direkomendasikan', 20.0), 
-    ('Mahal', 'Normal', 'Mahal', 'Sangat Tidak Direkomendasikan', 15.0), 
-    ('Mahal', 'Lama', 'Murah', 'Sangat Tidak Direkomendasikan', 15.0), 
-    ('Mahal', 'Lama', 'Sedang', 'Sangat Tidak Direkomendasikan', 5.0),  
-    ('Mahal', 'Lama', 'Mahal', 'Sangat Tidak Direkomendasikan', 0.0),  
+    ('Mahal', 'Cepat', 'Bagus', 'Direkomendasikan', 66.0),
+    ('Mahal', 'Cepat', 'Biasa', 'Tidak Direkomendasikan', 40.0),
+    ('Mahal', 'Cepat', 'Kurang', 'Tidak Direkomendasikan', 35.0),
+    ('Mahal', 'Normal', 'Bagus', 'Tidak Direkomendasikan', 40.0),
+    ('Mahal', 'Normal', 'Biasa', 'Sangat Tidak Direkomendasikan', 20.0),
+    ('Mahal', 'Normal', 'Kurang', 'Sangat Tidak Direkomendasikan', 15.0),
+    ('Mahal', 'Lama', 'Bagus', 'Sangat Tidak Direkomendasikan', 15.0),
+    ('Mahal', 'Lama', 'Biasa', 'Sangat Tidak Direkomendasikan', 5.0),
+    ('Mahal', 'Lama', 'Kurang', 'Sangat Tidak Direkomendasikan', 0.0),
 ]
 
 # Kamus konversi internal penyelarasan penulisan string antar modul fungsi
 _B_MAP = {'Murah': 'Murah', 'Sedang': 'Sedang', 'Mahal': 'Mahal'}
 _W_MAP = {'Cepat': 'Cepat', 'Normal': 'Normal', 'Lama': 'Lama'}
-_R_MAP = {'Murah': 'Bagus', 'Sedang': 'Biasa', 'Mahal': 'Kurang'}
+_R_MAP = {'Murah': 'Bagus', 'Sedang': 'Biasa', 'Mahal': 'Kurang', 'Bagus': 'Bagus', 'Biasa': 'Biasa', 'Kurang': 'Kurang'}
 
 
 #  MESIN INFERENSI FUZZY TSUKAMOTO 
@@ -344,7 +344,7 @@ def main():
             )
 
         st.divider()
-        st.caption("Metode Penilaian: Murni Fuzzy Tsukamoto")
+        st.caption("Metode: Fuzzy Tsukamoto")
         st.caption("© Copyright 2026. All rights reserved")
 
     # Alur navigasi multi-halaman kontrol session state
